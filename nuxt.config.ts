@@ -15,6 +15,10 @@ export default defineNuxtConfig({
     '/': { prerender: true }
   },
 
+  nitro: {
+    presets: ['node-server']
+  },
+
   compatibilityDate: '2025-01-15',
 
   eslint: {
