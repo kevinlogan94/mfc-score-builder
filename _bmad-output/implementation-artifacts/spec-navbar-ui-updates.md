@@ -66,6 +66,12 @@ baseline_commit: 'de4134e9a2de9eb3bb99cb0542035c20e21ff5f1'
 - **Known-bad state avoided:** Blank navbar on icon load failure; button visible at 640px viewport when it should be hidden.
 - **KEEP:** Nuxt icon implementation with dark mode color classes; responsive text hiding pattern.
 
+**Iteration 2 - Global style approach for sidebar hide:**
+- **Finding:** Scoped `:deep()` selector with media query wasn't hiding the menu button reliably on review.
+- **Amendment:** Changed to global non-scoped style using `[aria-label="Open menu"] { display: none !important; }` for reliable hiding.
+- **Known-bad state avoided:** Menu button remaining visible and blocking responsive design.
+- **KEEP:** Simple aria-label targeting, !important for CSS override certainty.
+
 ## Design Notes
 
 The Nuxt logo from `@iconify-json/simple-icons` is a well-recognized brand icon. It integrates via the Icon component pattern in Nuxt UI. Use `v-icon` or `Icon` component with `name="simple-icons:nuxt"` to render it. The icon should be sized to match the current badge height (h-8 w-8 or similar).
