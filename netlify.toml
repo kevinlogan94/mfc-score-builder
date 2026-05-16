@@ -3,7 +3,7 @@
 # Routing: Catch-all redirect for SPA hydration, with explicit rules for static assets
 
 [build]
-command = "pnpm run build"
+command = "corepack prepare && pnpm run build"
 publish = ".output/public"
 
 [build.environment]
