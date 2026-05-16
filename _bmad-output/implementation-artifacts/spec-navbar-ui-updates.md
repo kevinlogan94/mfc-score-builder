@@ -2,8 +2,9 @@
 title: Update navbar UI for mobile
 type: 'feature'
 created: '2026-05-16'
-status: 'draft'
+status: 'done'
 context: []
+baseline_commit: 'de4134e9a2de9eb3bb99cb0542035c20e21ff5f1'
 ---
 
 <frozen-after-approval reason="human-owned intent — do not modify unless human renegotiates">
@@ -49,8 +50,8 @@ context: []
 ## Tasks & Acceptance
 
 **Execution:**
-- [ ] `app/components/AppLogo.vue` -- Replace MFC text badge with Nuxt icon from `@iconify-json/simple-icons` -- Icon provides modern branding and works on all screen sizes
-- [ ] `app/app.vue` -- Add responsive class to hide sidebar toggle on mobile (if toggle is present) -- Removes clutter on mobile where sidebar content doesn't exist
+- [x] `app/components/AppLogo.vue` -- Replace MFC text badge with Nuxt icon from `@iconify-json/simple-icons` -- Icon provides modern branding and works on all screen sizes
+- [x] `app/app.vue` -- Add responsive class to hide sidebar toggle on mobile (if toggle is present) -- Removes clutter on mobile where sidebar content doesn't exist
 
 **Acceptance Criteria:**
 - Given the app loads on desktop, when I view the navbar, then the Nuxt logo is displayed instead of the MFC badge
@@ -58,6 +59,12 @@ context: []
 - Given dark mode is enabled, when I view the navbar on any device, then the logo is visible with proper contrast
 
 ## Spec Change Log
+
+**Iteration 1 - Icon load failure & breakpoint boundary:**
+- **Finding:** Edge Case Hunter identified that if the Nuxt icon fails to load, mobile users see a blank navbar (high severity). Blind Hunter noted brittle aria-label selector and breakpoint off by 1px.
+- **Amendment:** Added MFC fallback text for mobile in logo component and corrected breakpoint to 640px (inclusive boundary).
+- **Known-bad state avoided:** Blank navbar on icon load failure; button visible at 640px viewport when it should be hidden.
+- **KEEP:** Nuxt icon implementation with dark mode color classes; responsive text hiding pattern.
 
 ## Design Notes
 
@@ -70,3 +77,15 @@ The Nuxt logo from `@iconify-json/simple-icons` is a well-recognized brand icon.
 - Open app on mobile (<640px) and confirm sidebar toggle is hidden
 - Toggle dark mode and verify logo remains visible with good contrast on both desktop and mobile
 - Verify "May Fitness Challenge" text still hides on mobile as before
+
+## Suggested Review Order
+
+**Logo component update**
+
+- Nuxt icon replaces MFC badge with fallback "MFC" text for mobile (icon load resilience)
+  [`AppLogo.vue:1-7`](../../app/components/AppLogo.vue#L1)
+
+**Mobile menu toggle hiding**
+
+- CSS media query hides sidebar menu button on mobile viewports (responsive hiding at 640px breakpoint)
+  [`app.vue:55-62`](../../app/app.vue#L55)

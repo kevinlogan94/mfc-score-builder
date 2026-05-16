@@ -52,3 +52,11 @@ useSeoMeta({
     </UFooter>
   </UApp>
 </template>
+
+<style scoped>
+@media (max-width: 640px) {
+  :deep([aria-label="Open menu"]) {
+    display: none;
+  }
+}
+</style>
