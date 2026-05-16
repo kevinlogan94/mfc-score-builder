@@ -1,0 +1,4 @@
+id,name,sex,age,bodyweight_lb,e1_pullups,e2_box_squat_reps,e3_pushups,e4_sit_reach_inches,e5_chinups,e6_dips,e7_plank_sec,e8_deadhang_sec,e9_broad_jump_inches,e10_100m_sec,e11_mile_sec,e12_burpees
+1,Alex,male,36,185,18,42,55,4.5,12,20,120,180,220,13.2,420,45
+2,Bailey,female,31,145,85,38,40,8.0,6,15,95,120,175,16.5,540,38
+3,Case,male,41,210,0,20,30,-2.0,3,8,60,45,200,15.8,600,20

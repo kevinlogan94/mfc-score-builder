@@ -1,0 +1,55 @@
+{
+  "source": "docs/MFC 2026 Scorecard & Rules - All Participants.xlsx",
+  "sheet": "Womens data",
+  "unit": "seconds",
+  "tiers": [
+    "Beginner",
+    "Novice",
+    "Intermediate",
+    "Advanced",
+    "Elite"
+  ],
+  "tierPercentilesApprox": {
+    "Beginner": 5,
+    "Novice": 20,
+    "Intermediate": 50,
+    "Advanced": 80,
+    "Elite": 95
+  },
+  "byAge": {
+    "20": {
+      "Beginner": 640,
+      "Novice": 540,
+      "Intermediate": 464,
+      "Advanced": 408,
+      "Elite": 366
+    },
+    "25": {
+      "Beginner": 640,
+      "Novice": 540,
+      "Intermediate": 464,
+      "Advanced": 408,
+      "Elite": 366
+    },
+    "30": {
+      "Beginner": 640,
+      "Novice": 540,
+      "Intermediate": 464,
+      "Advanced": 408,
+      "Elite": 366
+    },
+    "35": {
+      "Beginner": 644,
+      "Novice": 544,
+      "Intermediate": 467,
+      "Advanced": 410,
+      "Elite": 368
+    },
+    "40": {
+      "Beginner": 658,
+      "Novice": 555,
+      "Intermediate": 477,
+      "Advanced": 419
+    }
+  }
+}

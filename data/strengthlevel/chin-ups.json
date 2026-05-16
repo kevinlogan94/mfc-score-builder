@@ -1,0 +1,707 @@
+{
+  "slug": "chin-ups",
+  "sourceUrl": "https://strengthlevel.com/strength-standards/chin-ups",
+  "fetchedAt": "2026-05-16T02:44:47.765Z",
+  "unit": "lb",
+  "legendPercentilesApprox": {
+    "Beginner": 5,
+    "Novice": 20,
+    "Intermediate": 50,
+    "Advanced": 80,
+    "Elite": 95
+  },
+  "mergeRuleMvp": "Stricter percentile: min(percentile_from_bodyweight_table, percentile_from_age_table). Missing dimension: use the other table only.",
+  "male": {
+    "byBodyweightLb": [
+      {
+        "bodyweightLb": 50,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 15,
+          "Advanced": 26,
+          "Elite": 37
+        }
+      },
+      {
+        "bodyweightLb": 55,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 15,
+          "Advanced": 25,
+          "Elite": 36
+        }
+      },
+      {
+        "bodyweightLb": 60,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 15,
+          "Advanced": 25,
+          "Elite": 35
+        }
+      },
+      {
+        "bodyweightLb": 65,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 15,
+          "Advanced": 24,
+          "Elite": 34
+        }
+      },
+      {
+        "bodyweightLb": 70,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 14,
+          "Advanced": 23,
+          "Elite": 33
+        }
+      },
+      {
+        "bodyweightLb": 75,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 14,
+          "Advanced": 23,
+          "Elite": 32
+        }
+      },
+      {
+        "bodyweightLb": 80,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 14,
+          "Advanced": 22,
+          "Elite": 31
+        }
+      },
+      {
+        "bodyweightLb": 85,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 13,
+          "Advanced": 21,
+          "Elite": 29
+        }
+      },
+      {
+        "bodyweightLb": 90,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 7,
+          "Intermediate": 13,
+          "Advanced": 20,
+          "Elite": 28
+        }
+      },
+      {
+        "bodyweightLb": 95,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 12,
+          "Advanced": 20,
+          "Elite": 27
+        }
+      },
+      {
+        "bodyweightLb": 100,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 12,
+          "Advanced": 19,
+          "Elite": 26
+        }
+      },
+      {
+        "bodyweightLb": 105,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 11,
+          "Advanced": 18,
+          "Elite": 26
+        }
+      },
+      {
+        "bodyweightLb": 110,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 11,
+          "Advanced": 18,
+          "Elite": 25
+        }
+      },
+      {
+        "bodyweightLb": 115,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 5,
+          "Intermediate": 10,
+          "Advanced": 17,
+          "Elite": 24
+        }
+      },
+      {
+        "bodyweightLb": 120,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 5,
+          "Intermediate": 10,
+          "Advanced": 16,
+          "Elite": 23
+        }
+      },
+      {
+        "bodyweightLb": 125,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 5,
+          "Intermediate": 10,
+          "Advanced": 16,
+          "Elite": 22
+        }
+      },
+      {
+        "bodyweightLb": 130,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 4,
+          "Intermediate": 9,
+          "Advanced": 15,
+          "Elite": 21
+        }
+      },
+      {
+        "bodyweightLb": 135,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 4,
+          "Intermediate": 9,
+          "Advanced": 14,
+          "Elite": 21
+        }
+      },
+      {
+        "bodyweightLb": 140,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 4,
+          "Intermediate": 9,
+          "Advanced": 14,
+          "Elite": 20
+        }
+      }
+    ],
+    "byAgeYears": [
+      {
+        "ageYears": 15,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 8,
+          "Advanced": 16,
+          "Elite": 26
+        }
+      },
+      {
+        "ageYears": 20,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 5,
+          "Intermediate": 13,
+          "Advanced": 23,
+          "Elite": 34
+        }
+      },
+      {
+        "ageYears": 25,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 14,
+          "Advanced": 24,
+          "Elite": 35
+        }
+      },
+      {
+        "ageYears": 30,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 14,
+          "Advanced": 24,
+          "Elite": 35
+        }
+      },
+      {
+        "ageYears": 35,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 14,
+          "Advanced": 24,
+          "Elite": 35
+        }
+      },
+      {
+        "ageYears": 40,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 6,
+          "Intermediate": 14,
+          "Advanced": 24,
+          "Elite": 35
+        }
+      },
+      {
+        "ageYears": 45,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 4,
+          "Intermediate": 12,
+          "Advanced": 22,
+          "Elite": 32
+        }
+      },
+      {
+        "ageYears": 50,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 2,
+          "Intermediate": 9,
+          "Advanced": 18,
+          "Elite": 28
+        }
+      },
+      {
+        "ageYears": 55,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 7,
+          "Advanced": 15,
+          "Elite": 24
+        }
+      },
+      {
+        "ageYears": 60,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 4,
+          "Advanced": 11,
+          "Elite": 19
+        }
+      },
+      {
+        "ageYears": 65,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 1,
+          "Advanced": 8,
+          "Elite": 14
+        }
+      },
+      {
+        "ageYears": 70,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 5,
+          "Elite": 10
+        }
+      },
+      {
+        "ageYears": 75,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 1,
+          "Elite": 7
+        }
+      },
+      {
+        "ageYears": 80,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 3
+        }
+      },
+      {
+        "ageYears": 85,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 0
+        }
+      },
+      {
+        "ageYears": 90,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 0
+        }
+      }
+    ]
+  },
+  "female": {
+    "byBodyweightLb": [
+      {
+        "bodyweightLb": 40,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 12,
+          "Elite": 20
+        }
+      },
+      {
+        "bodyweightLb": 45,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 12,
+          "Elite": 20
+        }
+      },
+      {
+        "bodyweightLb": 50,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 12,
+          "Elite": 19
+        }
+      },
+      {
+        "bodyweightLb": 55,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 7,
+          "Advanced": 12,
+          "Elite": 19
+        }
+      },
+      {
+        "bodyweightLb": 60,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 12,
+          "Elite": 18
+        }
+      },
+      {
+        "bodyweightLb": 65,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 11,
+          "Elite": 17
+        }
+      },
+      {
+        "bodyweightLb": 70,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 11,
+          "Elite": 17
+        }
+      },
+      {
+        "bodyweightLb": 75,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 10,
+          "Elite": 16
+        }
+      },
+      {
+        "bodyweightLb": 80,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 10,
+          "Elite": 15
+        }
+      },
+      {
+        "bodyweightLb": 85,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 5,
+          "Advanced": 9,
+          "Elite": 14
+        }
+      },
+      {
+        "bodyweightLb": 90,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 5,
+          "Advanced": 9,
+          "Elite": 14
+        }
+      },
+      {
+        "bodyweightLb": 95,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 5,
+          "Advanced": 9,
+          "Elite": 13
+        }
+      },
+      {
+        "bodyweightLb": 100,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 4,
+          "Advanced": 8,
+          "Elite": 12
+        }
+      },
+      {
+        "bodyweightLb": 105,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 4,
+          "Advanced": 8,
+          "Elite": 12
+        }
+      },
+      {
+        "bodyweightLb": 110,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 3,
+          "Advanced": 8,
+          "Elite": 11
+        }
+      },
+      {
+        "bodyweightLb": 115,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 3,
+          "Advanced": 7,
+          "Elite": 10
+        }
+      },
+      {
+        "bodyweightLb": 120,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 3,
+          "Advanced": 7,
+          "Elite": 10
+        }
+      }
+    ],
+    "byAgeYears": [
+      {
+        "ageYears": 15,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 1,
+          "Advanced": 8,
+          "Elite": 14
+        }
+      },
+      {
+        "ageYears": 20,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 12,
+          "Elite": 20
+        }
+      },
+      {
+        "ageYears": 25,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 13,
+          "Elite": 22
+        }
+      },
+      {
+        "ageYears": 30,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 13,
+          "Elite": 22
+        }
+      },
+      {
+        "ageYears": 35,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 13,
+          "Elite": 22
+        }
+      },
+      {
+        "ageYears": 40,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 6,
+          "Advanced": 13,
+          "Elite": 22
+        }
+      },
+      {
+        "ageYears": 45,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 5,
+          "Advanced": 11,
+          "Elite": 19
+        }
+      },
+      {
+        "ageYears": 50,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 2,
+          "Advanced": 9,
+          "Elite": 16
+        }
+      },
+      {
+        "ageYears": 55,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 7,
+          "Elite": 12
+        }
+      },
+      {
+        "ageYears": 60,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 4,
+          "Elite": 9
+        }
+      },
+      {
+        "ageYears": 65,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 6
+        }
+      },
+      {
+        "ageYears": 70,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 3
+        }
+      },
+      {
+        "ageYears": 75,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 0
+        }
+      },
+      {
+        "ageYears": 80,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 0
+        }
+      },
+      {
+        "ageYears": 85,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 0
+        }
+      },
+      {
+        "ageYears": 90,
+        "tiers": {
+          "Beginner": 0,
+          "Novice": 0,
+          "Intermediate": 0,
+          "Advanced": 0,
+          "Elite": 0
+        }
+      }
+    ]
+  },
+  "pageTitle": "Chin Ups Standards for Men and Women (kg) - Strength Level"
+}

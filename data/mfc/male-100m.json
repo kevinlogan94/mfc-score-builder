@@ -1,0 +1,151 @@
+{
+  "source": "docs/MFC 2026 Scorecard & Rules - All Participants.xlsx",
+  "sheet": "Male 100m Times",
+  "unit": "seconds",
+  "rows": [
+    {
+      "sec": 11.5,
+      "score": 10
+    },
+    {
+      "sec": 11.6,
+      "score": 9.56
+    },
+    {
+      "sec": 11.7,
+      "score": 9.11
+    },
+    {
+      "sec": 11.8,
+      "score": 8.67
+    },
+    {
+      "sec": 11.9,
+      "score": 8.22
+    },
+    {
+      "sec": 12,
+      "score": 7.78
+    },
+    {
+      "sec": 12.1,
+      "score": 7.33
+    },
+    {
+      "sec": 12.2,
+      "score": 6.89
+    },
+    {
+      "sec": 12.3,
+      "score": 6.44
+    },
+    {
+      "sec": 12.4,
+      "score": 6
+    },
+    {
+      "sec": 12.5,
+      "score": 5.55
+    },
+    {
+      "sec": 12.6,
+      "score": 5.11
+    },
+    {
+      "sec": 12.7,
+      "score": 4.66
+    },
+    {
+      "sec": 12.8,
+      "score": 4.22
+    },
+    {
+      "sec": 12.9,
+      "score": 3.77
+    },
+    {
+      "sec": 13,
+      "score": 3.33
+    },
+    {
+      "sec": 13.1,
+      "score": 3.16
+    },
+    {
+      "sec": 13.2,
+      "score": 3
+    },
+    {
+      "sec": 13.3,
+      "score": 2.83
+    },
+    {
+      "sec": 13.4,
+      "score": 2.66
+    },
+    {
+      "sec": 13.5,
+      "score": 2.5
+    },
+    {
+      "sec": 13.6,
+      "score": 2.33
+    },
+    {
+      "sec": 13.7,
+      "score": 2.16
+    },
+    {
+      "sec": 13.8,
+      "score": 2
+    },
+    {
+      "sec": 13.9,
+      "score": 1.83
+    },
+    {
+      "sec": 14,
+      "score": 1.66
+    },
+    {
+      "sec": 14.1,
+      "score": 1.5
+    },
+    {
+      "sec": 14.2,
+      "score": 1.33
+    },
+    {
+      "sec": 14.3,
+      "score": 1.17
+    },
+    {
+      "sec": 14.4,
+      "score": 1
+    },
+    {
+      "sec": 14.5,
+      "score": 0.83
+    },
+    {
+      "sec": 14.6,
+      "score": 0.67
+    },
+    {
+      "sec": 14.7,
+      "score": 0.5
+    },
+    {
+      "sec": 14.8,
+      "score": 0.33
+    },
+    {
+      "sec": 14.9,
+      "score": 0.17
+    },
+    {
+      "sec": 15,
+      "score": 0
+    }
+  ]
+}
