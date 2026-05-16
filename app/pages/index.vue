@@ -8,22 +8,21 @@ const fileRef = ref<HTMLInputElement | null>(null)
 const parseError = ref<string | null>(null)
 const scored = ref<ScoredParticipant[] | null>(null)
 const busy = ref(false)
-const showTemplatePreview = ref(false)
 
-// Event list for hero section
+// Event list for reference
 const events = [
-  { num: 1, name: 'Max Pull-ups', icon: 'i-lucide-dumbbell' },
-  { num: 2, name: 'Box Squat Reps', icon: 'i-lucide-dumbbell' },
-  { num: 3, name: 'Max Push-ups', icon: 'i-lucide-dumbbell' },
-  { num: 4, name: 'Sit & Reach', icon: 'i-lucide-activity' },
-  { num: 5, name: 'Max Chin-ups', icon: 'i-lucide-dumbbell' },
-  { num: 6, name: 'Max Dips', icon: 'i-lucide-dumbbell' },
-  { num: 7, name: 'Plank Hold', icon: 'i-lucide-timer' },
-  { num: 8, name: 'Dead Hang', icon: 'i-lucide-timer' },
-  { num: 9, name: 'Broad Jump', icon: 'i-lucide-activity' },
-  { num: 10, name: '100m Sprint', icon: 'i-lucide-timer' },
-  { num: 11, name: '1 Mile Run', icon: 'i-lucide-timer' },
-  { num: 12, name: 'Burpees (3 min)', icon: 'i-lucide-dumbbell' }
+  { num: 1, name: 'Max Pull-ups' },
+  { num: 2, name: 'Box Squat Reps' },
+  { num: 3, name: 'Max Push-ups' },
+  { num: 4, name: 'Sit & Reach' },
+  { num: 5, name: 'Max Chin-ups' },
+  { num: 6, name: 'Max Dips' },
+  { num: 7, name: 'Plank Hold' },
+  { num: 8, name: 'Dead Hang' },
+  { num: 9, name: 'Broad Jump' },
+  { num: 10, name: '100m Sprint' },
+  { num: 11, name: '1 Mile Run' },
+  { num: 12, name: 'Burpees (3 min)' }
 ]
 
 function pickFile() {
@@ -110,63 +109,60 @@ function resetResults() {
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full bg-white dark:bg-slate-950">
     <!-- Hero Section with MFC Branding -->
     <div
       v-if="!scored"
-      class="
-        bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700
-        text-white px-4 py-16 sm:py-20 md:py-24
-      "
+      class="bg-gradient-to-br from-blue-600 via-blue-500 to-blue-700 dark:from-blue-900 dark:via-blue-800 dark:to-blue-900 text-white px-4 py-20 sm:py-28 md:py-32"
     >
       <div class="max-w-4xl mx-auto space-y-8">
         <!-- Headline -->
-        <div class="space-y-3">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
-            MAY FITNESS
-            <br>
-            CHALLENGE 2026
+        <div class="space-y-4">
+          <h1 class="text-5xl sm:text-6xl md:text-7xl font-black leading-tight">
+            MAY FITNESS<br>CHALLENGE 2026
           </h1>
-          <p class="text-blue-100 text-lg sm:text-xl">
-            <strong>Stronger Together. Better Together.</strong>
+          <p class="text-blue-100 text-xl sm:text-2xl font-semibold">
+            Stronger Together. Better Together.
           </p>
         </div>
 
         <!-- Tagline & Description -->
         <div class="space-y-4">
-          <p class="text-blue-50 text-base sm:text-lg leading-relaxed max-w-2xl">
+          <p class="text-blue-50 text-lg sm:text-xl leading-relaxed max-w-2xl">
             Upload your participant scores and instantly see rankings. The Score Builder calculates per-event points
-            based on Strength Level data, totals them up, and ranks everyone.
+            based on Strength Level data, totals them up, and ranks everyone fairly.
           </p>
         </div>
 
-        <!-- Event Grid Preview -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          <div
-            v-for="event in events"
-            :key="event.num"
-            class="bg-white/10 backdrop-blur-sm rounded-lg p-3 text-center"
-          >
-            <div class="text-sm font-semibold text-blue-100">
-              {{ event.name }}
-            </div>
-            <div class="text-2xl mt-1">
-              💪
+        <!-- Event List (text-only, readable) -->
+        <div class="pt-4">
+          <p class="text-blue-100 text-sm font-semibold mb-4">
+            12 EVENTS SCORED
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <div
+              v-for="event in events"
+              :key="event.num"
+              class="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-3 text-center border border-white/20"
+            >
+              <div class="text-xl font-bold text-white">
+                {{ event.num }}
+              </div>
+              <div class="text-xs sm:text-sm font-medium text-blue-100 leading-tight mt-1">
+                {{ event.name }}
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Main CTA -->
-        <div class="pt-4">
+        <div class="pt-6">
           <UButton
             color="primary"
             size="lg"
             icon="i-lucide-upload"
             label="Upload CSV to Score"
-            class="
-              font-bold text-base
-              bg-white text-blue-600 hover:bg-blue-50
-            "
+            class="font-bold text-lg bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-slate-700 cursor-pointer"
             @click="pickFile"
           />
         </div>
@@ -174,138 +170,301 @@ function resetResults() {
     </div>
 
     <!-- Main Content Area -->
-    <div class="max-w-5xl mx-auto px-4 py-12 space-y-8">
+    <div class="max-w-5xl mx-auto px-4 py-16 space-y-16">
       <!-- Upload Section (shown when no scores) -->
       <div
         v-if="!scored"
-        class="space-y-6"
+        class="space-y-12"
       >
-        <!-- CSV Template Card -->
-        <UCard class="border-2 border-blue-200 bg-blue-50/50 dark:bg-slate-900">
-          <template #header>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-white">
+        <!-- CSV Preparation Section -->
+        <section class="space-y-8">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
               📋 Prepare Your CSV
             </h2>
-          </template>
-
-          <div class="space-y-4">
-            <p class="text-slate-700 dark:text-slate-300">
-              Your CSV file needs these columns in this exact order:
+            <p class="text-slate-600 dark:text-slate-400 text-lg">
+              Your CSV file needs these columns in this exact order
             </p>
+          </div>
 
-            <!-- Template Preview -->
-            <div
-              class="
-                bg-white dark:bg-slate-800 rounded-lg p-4
-                overflow-x-auto border border-slate-200 dark:border-slate-700
-              "
-            >
-              <table class="text-xs sm:text-sm w-full">
-                <thead>
-                  <tr class="border-b border-slate-300 dark:border-slate-600">
-                    <th class="text-left py-2 px-2 font-bold text-slate-900 dark:text-white">
+          <!-- Template Preview Table -->
+          <div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden shadow-sm">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+                  <tr>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
                       id
                     </th>
-                    <th class="text-left py-2 px-2 font-bold text-slate-900 dark:text-white">
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
                       name
                     </th>
-                    <th class="text-left py-2 px-2 font-bold text-slate-900 dark:text-white">
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
                       sex
                     </th>
-                    <th class="text-left py-2 px-2 font-bold text-slate-900 dark:text-white">
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
                       age
                     </th>
-                    <th class="text-left py-2 px-2 font-bold text-slate-900 dark:text-white">
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
                       bw_lb
                     </th>
-                    <th class="text-left py-2 px-2 font-bold text-slate-900 dark:text-white">
-                      e1…e12
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e1_pullups
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e2_box_squat_reps
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e3_pushups
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e4_sit_reach_inches
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e5_chinups
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e6_dips
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e7_plank_sec
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e8_deadhang_sec
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e9_broad_jump_inches
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e10_100m_sec
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e11_mile_sec
+                    </th>
+                    <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
+                      e12_burpees
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="border-b border-slate-200 dark:border-slate-700">
-                    <td class="py-2 px-2 text-slate-600 dark:text-slate-300">
+                  <tr class="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
                       1
                     </td>
-                    <td class="py-2 px-2 text-slate-600 dark:text-slate-300">
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
                       Alex
                     </td>
-                    <td class="py-2 px-2 text-slate-600 dark:text-slate-300">
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
                       male
                     </td>
-                    <td class="py-2 px-2 text-slate-600 dark:text-slate-300">
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
                       30
                     </td>
-                    <td class="py-2 px-2 text-slate-600 dark:text-slate-300">
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
                       180
                     </td>
-                    <td class="py-2 px-2 text-slate-600 dark:text-slate-300">
-                      15, 40, 50, …
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      15
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      40
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      50
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      5.0
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      10
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      18
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      120
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      180
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      210
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      13.0
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      420
+                    </td>
+                    <td class="px-4 py-3 text-slate-600 dark:text-slate-400">
+                      40
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+          </div>
 
-            <div class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-              <p>
-                <strong>Column Details:</strong>
-              </p>
-              <ul class="list-disc list-inside space-y-1 ml-2">
-                <li>
-                  <strong>sex:</strong>
-                  "male" or "female" (or m/f)
-                </li>
-                <li>
-                  <strong>e1_pullups:</strong>
+          <!-- Column Descriptions -->
+          <div class="space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+              Column Details
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  id
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Unique participant ID
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  name
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Participant name
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  sex
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  "male" or "female" (m/f)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  age
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Age in years
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  bodyweight_lb
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Body weight in lbs
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e1_pullups
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
                   Max pull-ups (reps)
-                </li>
-                <li>
-                  <strong>e2_box_squat_reps, e3_pushups:</strong>
-                  Reps
-                </li>
-                <li>
-                  <strong>e4_sit_reach_inches:</strong>
-                  Inches (can be negative)
-                </li>
-                <li>
-                  <strong>e5_chinups, e6_dips:</strong>
-                  Max reps
-                </li>
-                <li>
-                  <strong>e7_plank_sec, e8_deadhang_sec:</strong>
-                  Seconds
-                </li>
-                <li>
-                  <strong>e9_broad_jump_inches, e10_100m_sec, e11_mile_sec:</strong>
-                  Distance/time
-                </li>
-                <li>
-                  <strong>e12_burpees:</strong>
-                  Reps in 3 minutes
-                </li>
-              </ul>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-3">
-              <UButton
-                color="primary"
-                variant="soft"
-                icon="i-lucide-download"
-                label="Download Template CSV"
-                @click="downloadTemplate"
-              />
-              <UButton
-                color="primary"
-                variant="outline"
-                icon="i-lucide-eye"
-                label="View Sample"
-                @click="showTemplatePreview = !showTemplatePreview"
-              />
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e2_box_squat_reps
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Box squat reps
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e3_pushups
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Max push-ups (reps)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e4_sit_reach_inches
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Sit & reach (inches)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e5_chinups
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Max chin-ups (reps)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e6_dips
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Max dips (reps)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e7_plank_sec
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Plank hold (seconds)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e8_deadhang_sec
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Dead hang (seconds)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e9_broad_jump_inches
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Broad jump (inches)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e10_100m_sec
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  100m sprint (seconds)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e11_mile_sec
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  1 mile run (seconds)
+                </p>
+              </div>
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+                  e12_burpees
+                </p>
+                <p class="text-xs text-slate-600 dark:text-slate-400">
+                  Burpees in 3 min (reps)
+                </p>
+              </div>
             </div>
           </div>
-        </UCard>
+
+          <!-- Download Template Button -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <UButton
+              color="primary"
+              size="lg"
+              icon="i-lucide-download"
+              label="Download Template CSV"
+              class="cursor-pointer font-semibold"
+              @click="downloadTemplate"
+            />
+            <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center">
+              Download this template and fill in your data
+            </p>
+          </div>
+        </section>
 
         <!-- Hidden File Input -->
         <input
@@ -316,24 +475,27 @@ function resetResults() {
           @change="onFileSelected"
         >
 
-        <!-- Upload Button Card -->
-        <UCard class="border-2 border-green-200 bg-green-50/50 dark:bg-slate-800">
-          <template #header>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-white">
+        <!-- Upload Card -->
+        <section class="space-y-6">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
               📤 Upload Your File
             </h2>
-          </template>
+            <p class="text-slate-600 dark:text-slate-400 text-lg">
+              Select your completed CSV to get started
+            </p>
+          </div>
 
-          <div class="flex flex-col items-center justify-center py-8 space-y-4 text-center">
-            <div class="text-5xl">
+          <div class="bg-white dark:bg-slate-900 border-2 border-dashed border-blue-300 dark:border-blue-800 rounded-xl p-12 text-center space-y-6">
+            <div class="text-6xl">
               📁
             </div>
             <div>
-              <p class="text-slate-700 dark:text-slate-300 font-semibold">
+              <p class="text-xl font-semibold text-slate-900 dark:text-white">
                 Ready to score?
               </p>
-              <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                Select your CSV file to get started
+              <p class="text-slate-600 dark:text-slate-400 mt-2">
+                Select your CSV file to begin
               </p>
             </div>
             <UButton
@@ -342,102 +504,113 @@ function resetResults() {
               size="lg"
               icon="i-lucide-upload"
               label="Choose CSV file"
-              class="font-semibold"
+              class="cursor-pointer font-bold"
               @click="pickFile"
             />
-          </div>
 
-          <!-- Error Display -->
-          <UAlert
-            v-if="parseError"
-            class="mt-6"
-            color="error"
-            variant="subtle"
-            title="⚠️ Could not parse CSV"
-            :description="parseError"
-            icon="i-lucide-alert-circle"
-          />
-        </UCard>
+            <!-- Error Display -->
+            <UAlert
+              v-if="parseError"
+              color="error"
+              variant="subtle"
+              title="⚠️ Could not parse CSV"
+              :description="parseError"
+              icon="i-lucide-alert-circle"
+              class="mt-6 text-left"
+            />
+          </div>
+        </section>
 
         <!-- Scoring Info Section -->
-        <UCard class="border-2 border-slate-200 dark:border-slate-700">
-          <template #header>
-            <h2 class="text-lg font-bold text-slate-900 dark:text-white">
+        <section class="space-y-6">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
               ✨ How Scoring Works
             </h2>
-          </template>
+          </div>
 
-          <div class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-            <p>
-              <strong>Points per event:</strong>
-              Each event is scored on a scale of 0–10 points. Top performers get 10; scores
-              decrease based on performance relative to the group.
-            </p>
-            <p>
-              <strong>Strength Level integration:</strong>
-              For pull-ups, chin-ups, and dips, scores are calculated using Strength Level's
-              body weight and age-based percentile tables. We take the stricter of the two
-              percentiles for accuracy.
-            </p>
-            <p>
-              <strong>Total score:</strong>
-              All 12 events are summed. Max possible score is 120 points. Participants are
-              ranked by total score (highest first).
-            </p>
-            <p class="text-xs text-slate-600 dark:text-slate-400 italic">
+          <div class="space-y-4">
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+              <p class="font-bold text-slate-900 dark:text-white mb-2">
+                Points per event
+              </p>
+              <p class="text-slate-700 dark:text-slate-300">
+                Each event is scored on a scale of 0–10 points. Top performers get 10; scores decrease based on performance relative to the group.
+              </p>
+            </div>
+
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+              <p class="font-bold text-slate-900 dark:text-white mb-2">
+                Strength Level integration
+              </p>
+              <p class="text-slate-700 dark:text-slate-300">
+                For pull-ups, chin-ups, and dips, scores are calculated using Strength Level's body weight and age-based percentile tables. We take the stricter of the two percentiles for accuracy.
+              </p>
+            </div>
+
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+              <p class="font-bold text-slate-900 dark:text-white mb-2">
+                Total score
+              </p>
+              <p class="text-slate-700 dark:text-slate-300">
+                All 12 events are summed. Max possible score is 120 points. Participants are ranked by total score (highest first).
+              </p>
+            </div>
+
+            <div class="text-sm text-slate-600 dark:text-slate-400">
               🔗 Learn more:
               <NuxtLink
                 to="https://www.strengthlevel.com"
                 target="_blank"
-                class="text-blue-600 dark:text-blue-400 hover:underline"
+                class="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
               >
                 Strength Level
               </NuxtLink>
-            </p>
+            </div>
           </div>
-        </UCard>
+        </section>
       </div>
 
       <!-- Results Section (shown after upload) -->
       <div
         v-if="scored?.length"
-        class="space-y-6"
+        class="space-y-8"
       >
         <!-- Results Header -->
-        <div
-          class="
-            flex flex-col sm:flex-row sm:items-center
-            sm:justify-between gap-4 py-4
-            border-b-2 border-blue-200 dark:border-blue-900
-          "
-        >
+        <div class="space-y-4 border-b border-slate-200 dark:border-slate-700 pb-6">
           <div>
-            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white">
               🏆 Results
             </h2>
-            <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
+            <p class="text-slate-600 dark:text-slate-400 text-lg mt-2">
               {{ scored.length }} participants scored
             </p>
           </div>
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-3">
             <UButton
               color="primary"
+              size="lg"
               icon="i-lucide-file-down"
               label="Download CSV"
+              class="cursor-pointer font-semibold"
               @click="exportCsv"
             />
             <UButton
               color="primary"
               variant="outline"
+              size="lg"
               icon="i-lucide-braces"
               label="Download JSON"
+              class="cursor-pointer font-semibold"
               @click="exportJson"
             />
             <UButton
               color="neutral"
               variant="outline"
+              size="lg"
               icon="i-lucide-upload"
               label="Upload Another"
+              class="cursor-pointer font-semibold"
               @click="resetResults"
             />
           </div>
@@ -446,7 +619,7 @@ function resetResults() {
         <!-- Results Table -->
         <div class="overflow-x-auto rounded-lg border border-slate-200 dark:border-slate-700">
           <table class="w-full text-sm">
-            <thead class="bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+            <thead class="bg-slate-50 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
               <tr>
                 <th class="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">
                   Rank
@@ -460,11 +633,7 @@ function resetResults() {
                 <th
                   v-for="ek in eventKeys"
                   :key="ek"
-                  class="
-                    px-3 py-3 text-center font-bold
-                    text-slate-700 dark:text-slate-300
-                    whitespace-nowrap text-xs sm:text-sm
-                  "
+                  class="px-3 py-3 text-center font-bold text-slate-700 dark:text-slate-300 whitespace-nowrap text-xs sm:text-sm"
                   :title="EVENT_LABELS[ek]"
                 >
                   <span class="hidden sm:inline">{{ EVENT_LABELS[ek] }}</span>
@@ -481,31 +650,19 @@ function resetResults() {
                 <td class="px-4 py-3 font-bold text-slate-900 dark:text-white">
                   <span
                     v-if="p.rank === 1"
-                    class="
-                      inline-flex items-center justify-center
-                      w-8 h-8 bg-yellow-400 text-yellow-900
-                      rounded-full font-black text-sm
-                    "
+                    class="inline-flex items-center justify-center w-8 h-8 bg-yellow-400 text-yellow-900 rounded-full font-black text-sm"
                   >
                     🥇
                   </span>
                   <span
                     v-else-if="p.rank === 2"
-                    class="
-                      inline-flex items-center justify-center
-                      w-8 h-8 bg-gray-300 text-gray-900
-                      rounded-full font-black text-sm
-                    "
+                    class="inline-flex items-center justify-center w-8 h-8 bg-gray-300 text-gray-900 rounded-full font-black text-sm"
                   >
                     🥈
                   </span>
                   <span
                     v-else-if="p.rank === 3"
-                    class="
-                      inline-flex items-center justify-center
-                      w-8 h-8 bg-orange-400 text-orange-900
-                      rounded-full font-black text-sm
-                    "
+                    class="inline-flex items-center justify-center w-8 h-8 bg-orange-400 text-orange-900 rounded-full font-black text-sm"
                   >
                     🥉
                   </span>
@@ -523,11 +680,7 @@ function resetResults() {
                 <td
                   v-for="ek in eventKeys"
                   :key="ek"
-                  class="
-                    px-3 py-3 text-center
-                    text-slate-700 dark:text-slate-300
-                    text-xs sm:text-sm
-                  "
+                  class="px-3 py-3 text-center text-slate-700 dark:text-slate-300 text-xs sm:text-sm"
                 >
                   {{ p.events[ek]?.toFixed(1) ?? '—' }}
                 </td>
@@ -537,14 +690,12 @@ function resetResults() {
         </div>
 
         <!-- Scoring Note -->
-        <UCard class="bg-blue-50/50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700">
+        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
           <p class="text-sm text-slate-700 dark:text-slate-300">
             <strong>📊 Scoring Method:</strong>
-            Per-event points are on a 0–10 scale. Strength Level events (chin-ups, dips,
-            pull-ups) use body weight and age percentiles. Total score = sum of all 12 events
-            (max 120).
+            Per-event points are on a 0–10 scale. Strength Level events (chin-ups, dips, pull-ups) use body weight and age percentiles. Total score = sum of all 12 events (max 120).
           </p>
-        </UCard>
+        </div>
       </div>
     </div>
   </div>
