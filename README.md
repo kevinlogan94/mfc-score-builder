@@ -31,10 +31,12 @@ pnpm run test
 pnpm run build
 ```
 
-## Deploy (Vercel)
+## Deploy (Netlify)
 
-- Connect the repo to Vercel; **Framework Preset:** Nuxt.js. Default `nuxt build` / Nitro output works.
+- Connect the repo to Netlify (or use the `netlify.toml` in the root for configuration).
+- **Build settings:** Framework preset auto-detects as Nuxt; build command (`pnpm run build`) and publish directory (`.output/public`) are configured in `netlify.toml`. Node 22 and pnpm 10.33.4 are pinned for consistency with the CI environment.
 - **No secrets or env vars** required for scoring (all data is in-repo). Optional: set `NUXT_PUBLIC_*` later if you add analytics.
+- Deploy triggers on every push to your connected branch. SPA routing (catch-all redirect to `/index.html`) enables client-side navigation for all routes except `/` (which is prerendered).
 
 ## Gaps / MVP notes (see code comments)
 

@@ -311,136 +311,136 @@ function resetResults() {
               Column Details
             </h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   id
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Unique participant ID
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   name
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Participant name
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   sex
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   "male" or "female" (m/f)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   age
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Age in years
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   bodyweight_lb
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Body weight in lbs
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e1_pullups
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Max pull-ups (reps)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e2_box_squat_reps
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Box squat reps
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e3_pushups
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Max push-ups (reps)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e4_sit_reach_inches
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Sit & reach (inches)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e5_chinups
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Max chin-ups (reps)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e6_dips
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Max dips (reps)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e7_plank_sec
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Plank hold (seconds)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e8_deadhang_sec
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Dead hang (seconds)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e9_broad_jump_inches
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   Broad jump (inches)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e10_100m_sec
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   100m sprint (seconds)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e11_mile_sec
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">
                   1 mile run (seconds)
                 </p>
               </div>
-              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
-                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-sm">
+              <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg px-3 py-3 border border-slate-200 dark:border-slate-700">
+                <p class="font-semibold text-slate-900 dark:text-white mb-1 text-xs">
                   e12_burpees
                 </p>
                 <p class="text-xs text-slate-600 dark:text-slate-400">

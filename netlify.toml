@@ -1,0 +1,30 @@
+# Netlify Configuration for Nuxt 4 SPA
+# Build settings: pnpm + Node 22, prerendered static output to .output/public/
+# Routing: Catch-all redirect for SPA hydration, with explicit rules for static assets
+
+[build]
+command = "pnpm run build"
+publish = ".output/public"
+
+[build.environment]
+NODE_VERSION = "22"
+PNPM_VERSION = "10.33.4"
+
+# Explicit redirect rules for static assets (must come before catch-all)
+# These prevent static files from being routed to /index.html
+[[redirects]]
+from = "/_nuxt/*"
+to = "/_nuxt/:splat"
+status = 200
+
+[[redirects]]
+from = "/assets/*"
+to = "/assets/:splat"
+status = 200
+
+# SPA catch-all: Route all other requests to /index.html for client-side navigation
+# The root route (/) is prerendered; all others are hydrated on the client
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
